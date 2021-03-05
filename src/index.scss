@@ -1,0 +1,156 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+h1{
+  color: red;
+}
+.navBar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 2;
+}
+.navBar *{
+  margin: 0 .5rem;
+  padding: .5rem 0; 
+  margin: 0;
+  text-align: center;
+}
+.navBar .title{
+  text-align: center;
+}
+.menuButton{
+  border: none;
+  background-size: cover;
+  height: 24px;
+  width: 24px;
+  position: fixed;
+  left: 16px;
+  z-index: 2;
+}
+
+.menu{
+  
+  display: flex;
+  height: 100%;
+  padding: 0 .2rem;
+  padding-right: 5rem;
+  background: white;
+  position: absolute;
+  left: -480px;
+  top: 0;
+  transition: .5s;
+  padding: 0;
+   ul{
+    margin: 2rem .5rem;
+    padding: 0;
+    width: 190px;
+  }
+   li{
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem .5rem;
+    font-size: 0.9rem;
+    transition: .1s;
+  }
+  li:hover{
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  .coverMenu{
+    display: none;
+    background: black;
+    width: 170px;
+    margin-right: -160px;
+    animation-name: shows;
+    animation-duration: 1s;
+  }
+}
+@keyframes shows {
+  0% {
+    opacity: 0;
+  }
+  100%{
+    opacity: 70%;
+  }
+}
+
+.responsive{
+  box-shadow: 5px 0 3px -2px rgb(185, 185, 185);
+
+  display: flex;
+  .coverMenu{
+    display: grid;
+    background: black;
+    width: 160px;
+    animation-name: shows;
+    animation-duration: 1s;
+    opacity: 70%;
+  }
+  .menuButton{
+    left: 250px;
+  }
+  transition: 1s;
+  position: absolute;
+  left: 0;
+}
+.rightTopBar{
+  display: none;
+}
+
+@media screen and (min-width: 768px){
+  .menu{
+    background: white;
+    position: sticky;
+    left: 0;
+    display: flex;
+    box-shadow: 0 4px 8px 0 rgba(211, 211, 211, 0.2);
+
+  }
+  .menu ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+  }
+  .navBar{
+    display: none;
+  }
+  .rightTopBar{
+    display: grid;
+    align-items: center;
+    img{
+      width: 24px;
+      height: 24px;
+      margin: 0 .5rem;
+      transition: .1s;
+    }
+    img:hover{
+      cursor: pointer;
+      width: 28px;
+      height: 28px;
+    }
+  }
+  .iframe{
+    filter: opacity(0.6);
+    fill: red;
+   
+  }
+  .iframe:hover{
+    filter: opacity(1);
+  }
+    
+  
+  
+}
