@@ -3,6 +3,7 @@ import closebtn from '../img/x.svg';
 import openBnt from '../img/menu.svg';
 import search from '../img/search.svg';
 import account from '../img/user.svg';
+import CartWidget from './CartWidget';
 
 const Navbar = () => {
   const [imgButton, setMenuButton] = useState(openBnt);
@@ -17,8 +18,8 @@ const Navbar = () => {
       <div className="navBar">
         <img onClick={principal} src={imgButton} id="menuButton" className="menuButton" />
         <div></div>
-        <h2 className="title">Productos Sm</h2>
-        <img className="profileImage" src="" alt="image" />
+        <CartWidget />
+        <img className="profileImage" src={account} alt="image" />
       </div>
       <div id="menu" className={menuClass}>
         <ul>

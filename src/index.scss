@@ -16,9 +16,20 @@ h1{
 }
 .navBar{
   display: flex;
-  justify-content: space-between;
   align-items: center;
   z-index: 2;
+   .title{
+     margin: auto;
+    text-align: center;
+  }
+  .profileImage{
+    height: 24px;
+    width: 24px;
+    padding: .1rem;
+    border: 1px solid black;
+    border-radius: 20px;
+    margin-right: 1rem;
+  }
 }
 .navBar *{
   margin: 0 .5rem;
@@ -26,17 +37,14 @@ h1{
   margin: 0;
   text-align: center;
 }
-.navBar .title{
-  text-align: center;
-}
+
 .menuButton{
   border: none;
   background-size: cover;
   height: 24px;
   width: 24px;
-  position: fixed;
-  left: 16px;
   z-index: 2;
+  margin-left: 1rem;
 }
 
 .menu{
@@ -52,7 +60,7 @@ h1{
   transition: .5s;
   padding: 0;
    ul{
-    margin: 2rem .5rem;
+     margin-right: .6rem;
     padding: 0;
     width: 190px;
   }
@@ -101,7 +109,7 @@ h1{
   .menuButton{
     left: 250px;
   }
-  transition: 1s;
+  transition: .5s;
   position: absolute;
   left: 0;
 }
