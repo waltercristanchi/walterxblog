@@ -1,16 +1,19 @@
 import React from 'react';
 import Navbar from './components/Navbar';
-import Productos from './components/Productos';
+import Productos from './components/ItemListContainer';
 
 function App() {
   const productos = [
     {
       nombre: "Producto1",
-      precio: "15"
+      precio: "15",
+      stock: 5
     },
     {
       nombre: "Producto2",
-      precio: "5"
+      precio: "5",
+      stock: "5"
+
     }
 
   ]

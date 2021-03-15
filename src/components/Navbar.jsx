@@ -18,7 +18,6 @@ const Navbar = () => {
       <div className="navBar">
         <img onClick={principal} src={imgButton} id="menuButton" className="menuButton" />
         <div></div>
-        <CartWidget />
         <img className="profileImage" src={account} alt="image" />
       </div>
       <div id="menu" className={menuClass}>
@@ -33,7 +32,7 @@ const Navbar = () => {
         <div className="rightTopBar">
           <ul>
 
-            <img className="iframe" src={search} frameborder="0" />
+            <CartWidget />
             <img className="iframe" src={account} alt="" />
           </ul>
         </div>
