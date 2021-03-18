@@ -1,27 +1,11 @@
-import React, { useState } from 'react'
-import ItemCount from './ItemCount'
+import React from 'react'
+import ItemList from './ItemList'
 
 const ItemListContainer = (props) => {
-  const [productos, setProductos] = useState(props.productos)
-  const [stock, setStock] = useState(5)
-  const restarStock = (e, nuevoStock) => {
-    e.preventDefault()
-    setStock(stock - nuevoStock)
-
-  }
-  React.useEffect(() => {
-    // Actualiza el título del documento usando la API del navegador
-
-  });
+  console.log(props.items)
   return (
     <div>
-      {productos.map(elemento => (
-        <div key={elemento.nombre}>
-          <h2>{elemento.nombre}</h2>
-          <p>{elemento.precio}</p>
-          <ItemCount nombre={elemento.nombre} stock={stock} initial={1} onAdd={restarStock} />
-        </div>
-      ))}
+      <ItemList items={props.items} />
     </div>
   )
 }

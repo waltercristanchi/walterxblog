@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Navbar from './components/Navbar';
-import Productos from './components/ItemListContainer';
+import ItemListContainer from './components/ItemListContainer';
 
 function App() {
+  const [items, setItems] = useState([])
   const productos = [
     {
       nombre: "Producto1",
@@ -18,11 +19,19 @@ function App() {
 
   ]
 
-
+  React.useEffect(() => {
+    new Promise((resolve, reject) => {
+      setTimeout(() => {
+        resolve(productos)
+      }, 2000);
+    }).then(
+      (resultado) => setItems(resultado)
+    )
+  })
   return (
     <div>
       <Navbar />
-      <Productos productos={productos} />
+      <ItemListContainer items={items} />
     </div>
   );
 }
